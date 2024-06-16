@@ -20,15 +20,15 @@ function App() {
 
   }, [])
 
-  
+  //update Loading animation 
   return (
     <>
       {loading ? (<div className="flex items-center justify-center min-h-screen bg-gray-100">
-        <img src="/public/loading.svg" alt="Loading..." />
+        <img src="/loading.svg" alt="Loading..." />
       </div>) :
         < div
           style={{
-            backgroundImage: "url('/public/images/img1.jpg')",
+            backgroundImage: "url('/images/img1.jpg')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

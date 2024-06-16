@@ -27,7 +27,7 @@ function HeroSection() {
       <div
         className="py-52 px-6 "
         style={{
-          backgroundImage: "url('/public/images/img1.jpg')",
+          backgroundImage: "url('/images/img1.jpg')",
           backgroundSize: "cover",
           backgroundPosition: "center",
           backgroundRepeat: "no-repeat",
