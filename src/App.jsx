@@ -19,6 +19,8 @@ function App() {
     }, 3000)
 
   }, [])
+
+  
   return (
     <>
       {loading ? (<div className="flex items-center justify-center min-h-screen bg-gray-100">
