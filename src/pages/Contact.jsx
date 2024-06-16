@@ -60,7 +60,7 @@ function Contact() {
             <form className="max-w-md mx-auto" onSubmit={handleSubmit}>
               {loading ? (
                 <div className="flex justify-center items-center">
-                  <img src="/public/loading.svg" alt="Loading..." />
+                  <img src="/loading.svg" alt="Loading..." />
                 </div>
               ) : successMsg ? (
                 <div className="flex items-center justify-center bg-gray-100">
