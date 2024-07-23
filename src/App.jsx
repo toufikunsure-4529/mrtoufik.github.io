@@ -24,7 +24,7 @@ function App() {
   return (
     <>
       {loading ? (<div className="flex items-center justify-center min-h-screen bg-gray-100">
-        <img src="/loading.svg" alt="Loading..." />
+        <img src="/loading.svg" alt="Loading..." className="bg-gray-100" />
       </div>) :
         < div
           style={{
