@@ -5,45 +5,34 @@ function Testimonials() {
   const testimonials = [
     {
       id: 1,
-      name: "Alice Johnson",
-      position: "CTO, Tech Solutions Inc.",
-      feedback:
-        "Collaborating with Company was transformative. Their innovative approach and attention to detail resulted in a software solution that far exceeded our expectations. Highly recommended for cutting-edge solutions.",
+      name: "Jane Doe",
+      position: "Project Manager",
+      feedback: "Toufik is a highly skilled web developer. His attention to detail and ability to deliver on time was instrumental in the success of our project.",
       img: "/images/testimonials/client-1.jpg",
     },
     {
       id: 2,
-      name: "David Smith",
-      position: "COO, InnovateSoft Ltd.",
-      feedback:
-        "Company truly understands clients' needs. Their ability to translate our vision into a functional software product was remarkable. Clear communication and timely delivery made the process seamless. Highly satisfied with the outcome.",
+      name: "John Smith",
+      position: "CEO",
+      feedback: "Working with Toufik was a fantastic experience. His expertise and professionalism ensured our website was developed to the highest standards.",
       img: "/images/testimonials/client-2.jpg",
     },
     {
       id: 3,
-      name: "Jennifer Lee",
-      position: "CEO, DataTech Solutions",
-      feedback:
-        "Impressed by Company's expertise and professionalism. Their attention to detail was impeccable, greatly improving our efficiency. The delivered software has become instrumental in enhancing our productivity. Exceptional work!",
+      name: "Emily Johnson",
+      position: "Marketing Director",
+      feedback: "Toufik's web development skills are top-notch. He understood our requirements perfectly and delivered a website that exceeded our expectations.",
       img: "/images/testimonials/client-3.jpg",
     },
     {
       id: 4,
-      name: "Mark Wilson",
-      position: "CTO, Digital Dynamics",
-      feedback:
-        "Choosing Company was pivotal for our project's success. Their dedication, creativity, and technical skills were unmatched. The final product surpassed our expectations. We couldn't be happier with the outcome.",
+      name: "Michael Brown",
+      position: "CTO",
+      feedback: "Toufik is a great web developer. His technical skills and proactive approach made a significant difference in our project's success.",
       img: "/images/testimonials/client-4.jpg",
     },
-    {
-      id: 5,
-      name: "Sarah Johnson",
-      position: "VP of Engineering, TechGenius Innovations",
-      feedback:
-        "Our experience with Company was outstanding. They were responsive, flexible, and attentive throughout the development process. The delivered software not only meets but exceeds our expectations. Highly recommended for reliable solutions.",
-      img: "/images/testimonials/client-5.jpg",
-    },
   ];
+
 
   // State for tracking active testimonial index
   const [activeIndex, setActiveIndex] = useState(0);
@@ -111,9 +100,8 @@ function Testimonials() {
               {testimonials.map((data, index) => (
                 <button
                   key={index}
-                  className={`w-3 h-3 rounded-full ${
-                    index === activeIndex ? "bg-blue-900" : "bg-gray-500"
-                  }`}
+                  className={`w-3 h-3 rounded-full ${index === activeIndex ? "bg-blue-900" : "bg-gray-500"
+                    }`}
                   onClick={() => setActiveIndex(index)}
                 ></button>
               ))}
