@@ -1,0 +1,76 @@
+import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
+import React, { useEffect, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+
+function NavBar() {
+  const Links = [
+    { name: "Home", link: "/" },
+    { name: "Services", link: "/services" },
+    { name: "About", link: "/about" },
+    { name: "Contact", link: "/contact" },
+  ];
+
+  const [isNavOpen, setIsNavOpen] = useState(false);
+  const [isSticky, setIsSticky] = useState(false);
+  const navigate=useNavigate()
+
+  useEffect(() => {
+    const handleScrollWindow = () => {
+      if (window.scrollY > 200) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScrollWindow);
+    return () => {
+      window.removeEventListener("scroll", handleScrollWindow);
+    };
+  }, []);
+
+  return (
+    <div
+      className={`shadow-md w-full transition-transform duration-700 ease-in-out ${
+        isSticky ? "sticky-nav slide-down" : "absolute top-0 left-0 z-[99]"
+      }`}
+    >
+      <div className="md:px-10 py-4 px-7 md:flex justify-between items-center bg-white">
+        {/* Logo */}
+        <div className="flex text-xl cursor-pointer items-center gap-2">
+          <img src="/favicon.png" className="h-8 w-8" alt="LOGO" />
+          <span className="font-bold test">Toufik Portfollio</span>
+        </div>
+
+        {/* Menu Icon */}
+        <div
+          onClick={() => setIsNavOpen(!isNavOpen)}
+          className="w-7 h-7 absolute right-8 top-6 cursor-pointer md:hidden"
+        >
+          {isNavOpen ? <XMarkIcon /> : <Bars3BottomRightIcon />}
+        </div>
+
+        {/* Navigation Menu */}
+        <ul
+          className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto pl-9 md:pl-0 transition-all duration-500 ease-in ${
+            isNavOpen ? "top-12 bg-white" : "top-[-490px]"
+          }`}
+        >
+          {Links.map((link) => (
+            <li
+              className="font-semibold my-7 md:my-0 md:ml-8 hover:text-red-600 transition-all duration-200 ease-in"
+              key={link.name}
+            >
+              <Link to={link.link}>{link.name}</Link>
+            </li>
+          ))}
+          <button className="btn bg-blue-600 text-white py-1 px-3 md:ml-8 rounded md:static font-semibold" onClick={()=>navigate("/contact")}>
+            Contact Me
+          </button>
+        </ul>
+      </div>
+    </div>
+  );
+}
+
+export default NavBar;
