@@ -33,7 +33,11 @@ function Faq() {
   };
 
   return (
+<<<<<<< HEAD
     <div className="bg-[#F2F2F2] w-full " data-aos="fade-up">
+=======
+    <div className="bg-[#F2F2F2] w-full ">
+>>>>>>> 8c1c3357b0628e1f76595761a20bc83d2eca4efe
       <div className="max-w-4xl mx-auto py-6 px-2">
         <h1 className="text-4xl font-bold text-center mb-2 text-gray-900">
           FAQ

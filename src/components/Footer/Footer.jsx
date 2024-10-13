@@ -56,6 +56,7 @@ function Footer() {
   const year = new Date().getFullYear();
 
   return (
+<<<<<<< HEAD
     <div
       className="w-full text-white "
       style={{
@@ -64,6 +65,9 @@ function Footer() {
         backgroundBlendMode: "overlay",
       }}
     >
+=======
+    <div className="bg-black w-full text-white ">
+>>>>>>> 8c1c3357b0628e1f76595761a20bc83d2eca4efe
       <div className="max-w-5xl mx-auto py-7 px-2">
         {/* Contact info div */}
         <div className="flex gap-3 items-center justify-between flex-col md:flex-row">
@@ -188,12 +192,20 @@ function Footer() {
                   className="text-black px-2 mt-3 rounded"
                   placeholder="Email"
                 />
+<<<<<<< HEAD
                 <button
                   type="button"
                   className="bg-red-900 px-2 mt-3 py-2  cursor-pointer hover:bg-red-800 transition-all duration-200 ease-in"
                 >
                   Subscribe
                 </button>
+=======
+                <input
+                  type="button"
+                  value="Subscribe"
+                  className="bg-blue-900 px-3 rounded cursor-pointer"
+                />
+>>>>>>> 8c1c3357b0628e1f76595761a20bc83d2eca4efe
               </div>
             </div>
           </div>
@@ -201,7 +213,11 @@ function Footer() {
 
         {/* bottm footer copy right */}
       </div>
+<<<<<<< HEAD
       <div className="bg-gray-950 w-full mx-auto py-4">
+=======
+      <div className="bg-[#212121] w-full mx-auto py-7">
+>>>>>>> 8c1c3357b0628e1f76595761a20bc83d2eca4efe
         <p className="text-center text-sm">
           © Copyright {year} | Designed and Developed by{" "}
           <a

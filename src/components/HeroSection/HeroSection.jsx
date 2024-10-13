@@ -25,7 +25,11 @@ function HeroSection() {
   return (
     <>
       <div
+<<<<<<< HEAD
         className="py-56 px-6"
+=======
+        className="py-52 px-6 "
+>>>>>>> 8c1c3357b0628e1f76595761a20bc83d2eca4efe
         style={{
           backgroundImage: "url('/images/img1.jpg')",
           backgroundSize: "cover",
@@ -40,10 +44,14 @@ function HeroSection() {
           <p className="text-lg text-white mb-8 h-4" ref={el}>
             {/* This is where the Typed.js animation will render */}
           </p>
+<<<<<<< HEAD
           <button
             className="bg-white text-indigo-600 font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-indigo-600 hover:text-white transition duration-300"
             onClick={() => (window.location.href = "#about")}
           >
+=======
+          <button className="bg-white text-indigo-600 font-semibold py-2 px-6 rounded-full shadow-lg hover:bg-indigo-600 hover:text-white transition duration-300">
+>>>>>>> 8c1c3357b0628e1f76595761a20bc83d2eca4efe
             Explore My Work
           </button>
         </div>
