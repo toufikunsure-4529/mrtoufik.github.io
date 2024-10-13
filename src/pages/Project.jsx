@@ -85,7 +85,7 @@ function Project() {
 
         <div
           className="grid md:grid-cols-3 gap-4  mt-10 grid-cols-1 "
-          data-aos="fade-up"
+          
         >
           {/* images card */}
           {projects.map((project, index) => (

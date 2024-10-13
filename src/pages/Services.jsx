@@ -76,7 +76,7 @@ function Services() {
             </button>
           </div>
 
-          <div className="w-full md:w-1/2 md:pl-36" data-aos="fade-left">
+          <div className="w-full md:w-1/2 md:pl-36">
             <img
               src="/images/services/service-1.png"
               alt="Marketing"
@@ -88,7 +88,7 @@ function Services() {
         {/* Services -2 */}
 
         <div className="flex w-full px-8 md:px-24 justify-between items-center py-6 md:flex-row flex-col-reverse md:mt-0 mt-10 ">
-          <div className="w-full md:w-1/2 md:pr-36" data-aos="fade-right">
+          <div className="w-full md:w-1/2 md:pr-36" >
             <img
               src="/images/services/service-2.png"
               alt="Web Devlopment"
@@ -134,12 +134,12 @@ function Services() {
             </button>
           </div>
 
-          <div className="w-full md:w-1/2 md:pl-36" data-aos="fade-left">
+          <div className="w-full md:w-1/2 md:pl-36" >
             <img
               src="/images/services/service-3.png"
               alt="App Development"
               className="w-full h-auto md:w-full"
-              data-aos="fade-left"
+
             />
           </div>
         </div>

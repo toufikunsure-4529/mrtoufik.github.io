@@ -8,14 +8,12 @@ function About() {
       <div className="absolute bottom-16 right-16 h-40 w-40 bg-pink-500 rounded-full opacity-20 blur-3xl animate-pulse"></div>
 
       {/* Main Content */}
-      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20" data-aos="fade-up">
+      <div className="max-w-6xl mx-auto px-6 md:px-12 lg:px-20">
         <div className="grid grid-cols-1 lg:grid-cols-2 items-center gap-16">
           {/* Profile Card */}
           <div className="relative group">
             <div className="absolute -inset-1 rounded-2xl bg-gradient-to-trbg-gradient-to-b from-indigo-900 via-gray-900 to-gray-800 opacity-70 blur-lg group-hover:opacity-100 transition-all duration-500"></div>
-            <div
-              className="relative p-8 bg-gray-900 rounded-2xl shadow-lg card"
-            >
+            <div className="relative p-8 bg-gray-900 rounded-2xl shadow-lg card">
               <img
                 src="/profile1.jpeg"
                 alt="Toufik"
