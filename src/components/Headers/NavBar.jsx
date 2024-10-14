@@ -69,6 +69,7 @@ function NavBar() {
           <a
             className="btn bg-blue-600 text-white py-1 px-3 md:ml-8 rounded md:static font-semibold"
             href="/Toufik _Resume.pdf"
+            download
           >
             Download Resume
           </a>
