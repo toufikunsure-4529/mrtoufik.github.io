@@ -49,7 +49,7 @@ function App() {
         >
           <Navbar />
           <HeroSection />
-          <About />
+          {/* <About /> */}
           <Services />
           <Testimonials />
           <Faq />

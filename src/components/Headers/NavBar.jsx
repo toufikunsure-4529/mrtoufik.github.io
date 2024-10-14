@@ -6,13 +6,13 @@ function NavBar() {
   const Links = [
     { name: "Home", link: "/" },
     { name: "Services", link: "/services" },
-    { name: "About", link: "/about" },
+    { name: "About me", link: "/about" },
     { name: "Contact", link: "/contact" },
   ];
 
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-  const navigate=useNavigate()
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScrollWindow = () => {
@@ -37,10 +37,12 @@ function NavBar() {
     >
       <div className="md:px-10 py-4 px-7 md:flex justify-between items-center bg-white">
         {/* Logo */}
-        <div className="flex text-xl cursor-pointer items-center gap-2">
-          <img src="/favicon.png" className="h-8 w-8" alt="LOGO" />
-          <span className="font-bold test">Toufik Portfollio</span>
-        </div>
+        <Link to={"/"}>
+          <div className="flex text-xl cursor-pointer items-center gap-2">
+            <img src="/favicon.png" className="h-8 w-8" alt="LOGO" />
+            <span className="font-bold test">Toufik Portfollio</span>
+          </div>
+        </Link>
 
         {/* Menu Icon */}
         <div
@@ -64,9 +66,12 @@ function NavBar() {
               <Link to={link.link}>{link.name}</Link>
             </li>
           ))}
-          <button className="btn bg-blue-600 text-white py-1 px-3 md:ml-8 rounded md:static font-semibold" onClick={()=>navigate("/contact")}>
-            Contact Me
-          </button>
+          <a
+            className="btn bg-blue-600 text-white py-1 px-3 md:ml-8 rounded md:static font-semibold"
+            href="/Toufik _Resume.pdf"
+          >
+            Download Resume
+          </a>
         </ul>
       </div>
     </div>

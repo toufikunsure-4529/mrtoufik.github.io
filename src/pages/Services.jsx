@@ -27,7 +27,10 @@ function Services() {
   // }, []);
   return (
     <>
-      <div className="w-full bg-white" id="services">
+      <div
+        className="w-full bg-gradient-to-r from-indigo-50 via-white to-indigo-50"
+        id="services"
+      >
         <div className="pt-10">
           <h1 className="text-4xl font-bold text-black text-center mb-2">
             Our Services
@@ -88,7 +91,7 @@ function Services() {
         {/* Services -2 */}
 
         <div className="flex w-full px-8 md:px-24 justify-between items-center py-6 md:flex-row flex-col-reverse md:mt-0 mt-10 ">
-          <div className="w-full md:w-1/2 md:pr-36" >
+          <div className="w-full md:w-1/2 md:pr-36">
             <img
               src="/images/services/service-2.png"
               alt="Web Devlopment"
@@ -134,12 +137,11 @@ function Services() {
             </button>
           </div>
 
-          <div className="w-full md:w-1/2 md:pl-36" >
+          <div className="w-full md:w-1/2 md:pl-36">
             <img
               src="/images/services/service-3.png"
               alt="App Development"
               className="w-full h-auto md:w-full"
-
             />
           </div>
         </div>

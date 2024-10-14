@@ -70,7 +70,12 @@ function Project() {
   ];
 
   return (
-    <div className="w-full bg-[#F2F2F2]" id="about">
+    <div
+      className="w-full bg-gradient-to-r from-gray-300 via-gray-200 to-gray-50 relative"
+      id="about"
+    >
+      <div className="absolute top-5 left-5 h-36 w-36 bg-indigo-500 rounded-full opacity-30 blur-2xl animate-pulse"></div>
+      <div className="absolute bottom-16 right-16 h-40 w-40 bg-pink-500 rounded-full opacity-20 blur-3xl animate-pulse"></div>
       <div className="max-w-5xl mx-auto py-6 px-2">
         <h1 className="text-4xl font-bold text-center mb-2 text-gray-900">
           Our Projects
@@ -83,10 +88,7 @@ function Project() {
           work to see how I bring ideas to life online!
         </p>
 
-        <div
-          className="grid md:grid-cols-3 gap-4  mt-10 grid-cols-1 "
-          
-        >
+        <div className="grid md:grid-cols-3 gap-4  mt-10 grid-cols-1 ">
           {/* images card */}
           {projects.map((project, index) => (
             <div className=" py-11 project-card" key={index}>

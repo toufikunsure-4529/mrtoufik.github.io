@@ -32,7 +32,10 @@ function ContactComponents() {
   };
 
   return (
-    <div className="bg-white w-full card" id="contact">
+    <div
+      className="bg-gradient-to-r from-indigo-50 via-white to-indigo-50  w-full card"
+      id="contact"
+    >
       <div className="max-w-5xl mx-auto py-6 px-2">
         <h1 className="text-4xl font-bold text-center mb-2 text-gray-900">
           Get In Touch

@@ -10,12 +10,14 @@ import {
 } from "react-router-dom";
 import Layout from "./Layout";
 import Contact from "./pages/Contact";
+import Aboutus from "./pages/Aboutus";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<Layout />}>
       <Route path="/" element={<App />} />
       <Route path="/contact" element={<Contact />} />
+      <Route path="/about" element={<Aboutus />} />
     </Route>
   )
 );

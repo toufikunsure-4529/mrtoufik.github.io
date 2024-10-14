@@ -1,6 +1,6 @@
 import { MinusCircleIcon, PlusCircleIcon } from "@heroicons/react/24/solid";
 import React, { useState } from "react";
-
+import CodingGallery from "../components/common/CodingGallery";
 function Faq() {
   const [toggleFaq, setToggleFaq] = useState({});
 
@@ -33,7 +33,7 @@ function Faq() {
   };
 
   return (
-    <div className="bg-[#F2F2F2] w-full " >
+    <div className="bg-gradient-to-r from-indigo-50 via-white to-indigo-50 w-full ">
       <div className="max-w-4xl mx-auto py-6 px-2">
         <h1 className="text-4xl font-bold text-center mb-2 text-gray-900">
           FAQ
