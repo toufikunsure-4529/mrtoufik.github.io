@@ -5,6 +5,7 @@ import {
   PhoneArrowUpRightIcon,
 } from "@heroicons/react/24/solid";
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Footer() {
   const aboutUsLinks = [
@@ -14,30 +15,30 @@ function Footer() {
     },
     {
       menu: "About Us",
-      link: "/",
+      link: "/about",
     },
     {
       menu: "Our Services",
-      link: "/",
+      link: "/services",
     },
     {
       menu: "Terms & Condition",
-      link: "/",
+      link: "/about",
     },
     {
       menu: "Privacy Policy",
-      link: "/",
+      link: "/about",
     },
   ];
 
   const usefulLinks = [
     {
       menu: "Portfolio",
-      link: "/",
+      link: "/about",
     },
     {
       menu: "Team",
-      link: "/",
+      link: "/about",
     },
     {
       menu: "Career",
@@ -45,11 +46,11 @@ function Footer() {
     },
     {
       menu: "Contact",
-      link: "/",
+      link: "/contact",
     },
     {
       menu: "Help",
-      link: "/",
+      link: "/contact",
     },
   ];
 
@@ -86,7 +87,7 @@ function Footer() {
             </div>
             <div className="text-center">
               <a href="#" className="text-xl font-semibold">
-                toufiksk.ab3@gmail.com
+                devtoufik@gmail.com
               </a>
               <p className="text-gray-500">Online support</p>
             </div>
@@ -100,7 +101,7 @@ function Footer() {
             </div>
             <div className="text-center">
               <a href="#" className="text-xl font-semibold">
-                Newtown,West Bengal
+                Kolkata,West Bengal
               </a>
               <p className="text-gray-500">West Bengal 700136</p>
             </div>
@@ -138,13 +139,13 @@ function Footer() {
             {usefulLinks.map((data, index) => (
               <div className="flex flex-col gap-2" key={index}>
                 <div>
-                  <a
-                    href={data.link}
+                  <Link
+                    to={data.link}
                     className="hover:underline hover:text-blue-600 hover:font-semibold"
                   >
                     <ChevronRightIcon className="w-5 h-5 inline" />
                     {data.menu}
-                  </a>
+                  </Link>
                   <hr className="mt-2" />
                 </div>
               </div>
@@ -164,7 +165,7 @@ function Footer() {
                   <strong>Phone:</strong> +91: 8001-0740-96
                 </p>
                 <p>
-                  <strong>Email:</strong> toufiksk.ab3@gmail.com
+                  <strong>Email:</strong> devtoufik@gmail.com
                 </p>
                 <div className="flex">
                   {/* Add more generic social icons as needed */}

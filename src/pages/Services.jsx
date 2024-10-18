@@ -28,10 +28,10 @@ function Services() {
   return (
     <>
       <div
-        className="w-full bg-gradient-to-r from-indigo-50 via-white to-indigo-50"
+        className="w-full bg-gradient-to-r from-indigo-50 via-white to-indigo-50 pt-20"
         id="services"
       >
-        <div className="pt-10">
+        <div className="">
           <h1 className="text-4xl font-bold text-black text-center mb-2">
             Our Services
           </h1>
