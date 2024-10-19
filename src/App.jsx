@@ -14,7 +14,6 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 import About from "./components/common/About";
 
-
 function App() {
   const [loading, setLoading] = useState(true);
 

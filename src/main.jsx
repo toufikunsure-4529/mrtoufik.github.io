@@ -13,8 +13,8 @@ import Contact from "./pages/Contact";
 import Aboutus from "./pages/Aboutus";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import ServicesComponents from "./components/common/ServicesComponents";
 import Services from "./pages/Services";
+import QuickMsg from "./pages/QuickMsg";
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -23,6 +23,7 @@ const router = createBrowserRouter(
       <Route path="/contact" element={<Contact />} />
       <Route path="/about" element={<Aboutus />} />
       <Route path="/services" element={<Services />} />
+      <Route path="/quickmsg" element={<QuickMsg />} />
     </Route>
   )
 );

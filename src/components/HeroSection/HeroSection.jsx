@@ -24,7 +24,7 @@ function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full bg-gradient-to-r from-gray-300 via-gray-200 to-green-50 min-h-screen flex flex-col md:flex-row items-center justify-between px-8 md:px-24 py-16 overflow-hidden text-gray-900">
+    <section className="relative w-full bg-gradient-to-r from-gray-300 via-gray-200 to-green-50 min-h-screen flex flex-col md:flex-row items-center justify-between px-8 md:px-24 py-16 overflow-hidden text-gray-900 pt-32 md:pt-20">
       {/* Floating Decorative Shapes */}
       <div className="absolute top-5 left-5 h-36 w-36 bg-indigo-500 rounded-full opacity-30 blur-2xl animate-pulse"></div>
       <div className="absolute bottom-16 right-16 h-40 w-40 bg-pink-500 rounded-full opacity-20 blur-3xl animate-pulse"></div>
@@ -46,17 +46,24 @@ function HeroSection() {
 
         <div className="flex gap-3">
           <button
-            className="bg-indigo-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-indigo-700 hover:scale-105 transform transition duration-300"
+            className="bg-indigo-600 text-white font-semibold md:py-3 md:px-8 py-3 px-2 rounded-full shadow-lg hover:bg-indigo-700 hover:scale-105 transform transition duration-300"
             onClick={() => (window.location.href = "#about")}
           >
             Explore My Work
           </button>
-          <button
+          {/* <button
             className="bg-pink-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-pink-700 hover:scale-105 transform transition duration-300"
             onClick={() => (window.location.href = "#contact")}
           >
             Hire Me
-          </button>
+          </button> */}
+          <a
+            className="bg-pink-600 text-white font-semibold md:py-3 md:px-8 py-3 px-2 rounded-full shadow-lg hover:bg-pink-700 hover:scale-105 transform transition duration-300"
+            href="/Toufik _Resume.pdf"
+            download
+          >
+            Download Resume
+          </a>
         </div>
       </div>
 

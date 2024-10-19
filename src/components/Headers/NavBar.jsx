@@ -66,13 +66,24 @@ function NavBar() {
               <Link to={link.link}>{link.name}</Link>
             </li>
           ))}
-          <a
-            className="btn bg-blue-600 text-white py-1 px-3 md:ml-8 rounded md:static font-semibold"
-            href="/Toufik _Resume.pdf"
+          <Link
+            className="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transform transition duration-300 ease-in-out md:ml-8 md:static flex items-center justify-center"
+            to="/quickmsg"
             download
           >
-            Download Resume
-          </a>
+            <span className="flex items-center gap-2">
+              <svg
+                className="h-5 w-5"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+              >
+                <path d="M2 2a2 2 0 00-2 2v12a2 2 0 002 2h14a2 2 0 002-2V4a2 2 0 00-2-2H2zm0 2h14v12H2V4zm2 1a1 1 0 100 2h10a1 1 0 100-2H4z" />
+                <path d="M4 9h10v1H4z" />
+              </svg>
+              Quick Message
+            </span>
+          </Link>
         </ul>
       </div>
     </div>
