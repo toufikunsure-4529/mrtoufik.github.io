@@ -1,6 +1,7 @@
 import React from "react";
 import About from "../components/common/About";
 import CodingGallery from "../components/common/CodingGallery";
+import HomeAbout from "../components/common/HomeAbout";
 
 function Aboutus() {
   return (
@@ -9,7 +10,7 @@ function Aboutus() {
       <div className="absolute top-5 left-5 h-36 w-36 bg-indigo-500 rounded-full opacity-30 blur-2xl animate-pulse"></div>
       <div className="absolute bottom-16 right-16 h-40 w-40 bg-pink-500 rounded-full opacity-20 blur-3xl animate-pulse"></div>
       <div className=" mt-14">
-        <About />
+        <HomeAbout />
         <CodingGallery />
       </div>
     </div>

@@ -12,7 +12,8 @@ import Testimonials from "./pages/Testimonials";
 import ContactComponents from "./components/common/ContactComponents";
 import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
-import About from "./components/common/About";
+import HomeAbout from "./components/common/HomeAbout";
+import Education from "./components/common/Education";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -49,8 +50,9 @@ function App() {
         >
           <Navbar />
           <HeroSection />
-          {/* <About /> */}
-          <Services />
+          <HomeAbout />
+          {/* <Services /> */}
+          {/* <Education /> */}
           <Testimonials />
           <Faq />
           <Clients />

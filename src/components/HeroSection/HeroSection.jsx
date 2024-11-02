@@ -8,7 +8,7 @@ function HeroSection() {
     const typed = new Typed(el.current, {
       strings: [
         "Web Developer & Designer.",
-        "Mobile App Developer.",
+        "Frontend Developer.",
         "Building Scalable Solutions.",
         "Creating Seamless User Experiences.",
       ],
@@ -31,22 +31,25 @@ function HeroSection() {
 
       {/* Left Side: Text Content */}
       <div className="md:w-1/2 flex flex-col items-start text-left z-10">
-        <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight">
+        <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight ">
           Hi, I'm <span className="text-indigo-600">Toufik Sk</span>
         </h1>
 
-        <p className="text-lg md:text-2xl text-gray-700 mb-6" ref={el}>
+        <p
+          className="text-lg md:text-2xl text-gray-700 mb-6 font-overlock "
+          ref={el}
+        >
           {/* Typed.js animation */}
         </p>
 
-        <p className="text-md md:text-lg text-gray-600 mb-8">
-          I design and build modern web and mobile applications that drive
-          business success and deliver amazing user experiences.
+        <p className="text-md md:text-lg text-gray-600 mb-8 font-overlock ">
+          I design and build modern web applications that drive business success
+          and deliver amazing user experiences.
         </p>
 
         <div className="flex gap-3">
           <button
-            className="bg-indigo-600 text-white font-semibold md:py-3 md:px-8 py-3 px-2 rounded-full shadow-lg hover:bg-indigo-700 hover:scale-105 transform transition duration-300"
+            className="bg-indigo-600 text-white font-semibold md:py-3 md:px-8 py-1 px-1 rounded-2xl md:rounded-full shadow-lg hover:bg-indigo-700 hover:scale-105 transform transition duration-300 text-sm md:text-md"
             onClick={() => (window.location.href = "#about")}
           >
             Explore My Work
@@ -58,7 +61,7 @@ function HeroSection() {
             Hire Me
           </button> */}
           <a
-            className="bg-pink-600 text-white font-semibold md:py-3 md:px-8 py-3 px-2 rounded-full shadow-lg hover:bg-pink-700 hover:scale-105 transform transition duration-300"
+            className="bg-pink-600 text-white font-semibold md:py-3 md:px-8 py-2 px-2 rounded-full shadow-lg hover:bg-pink-700 hover:scale-105 transform transition duration-300"
             href="/Toufik _Resume.pdf"
             download
           >

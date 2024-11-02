@@ -1,5 +1,5 @@
 import { PaperClipIcon } from "@heroicons/react/24/solid";
-import React from "react";
+import React, { useState } from "react";
 
 function Project() {
   const projects = [
@@ -69,6 +69,16 @@ function Project() {
     },
   ];
 
+  const [intialViewProject, setIntialViewProject] = useState(6);
+  const [loading, setLoading] = useState(false);
+  const handleLoadMore = () => {
+    setLoading(true);
+    setTimeout(() => {
+      setIntialViewProject((prev) => prev + 3);
+      setLoading(false);
+    }, 2000);
+  };
+
   return (
     <div
       className="w-full bg-gradient-to-r from-gray-300 via-gray-200 to-gray-50 relative"
@@ -90,7 +100,7 @@ function Project() {
 
         <div className="grid md:grid-cols-3 gap-4  mt-10 grid-cols-1 ">
           {/* images card */}
-          {projects.map((project, index) => (
+          {projects.slice(0, intialViewProject).map((project, index) => (
             <div className=" py-11 project-card" key={index}>
               <div className="w-full overflow-hidden relative flex flex-col justify-between gap-4">
                 <div className="project-image-container">
@@ -125,6 +135,17 @@ function Project() {
 
           {/* images card end */}
         </div>
+      </div>
+      <div className="flex justify-center items-center py-4 ">
+        <button
+          className={` px-5 py-2 rounded ${
+            loading ? "bg-yellow-300  text-black" : "bg-yellow-500 text-white"
+          }`}
+          onClick={handleLoadMore}
+          disabled={loading}
+        >
+          {loading ? "Loading..." : "Load More"}
+        </button>
       </div>
     </div>
   );

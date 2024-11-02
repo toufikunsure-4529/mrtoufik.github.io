@@ -7,21 +7,23 @@ function Faq() {
   const FaqData = [
     {
       id: 1,
-      question: "- What are the main features?",
+      question: "- What are your primary skills as a Frontend Developer?",
       answer:
-        "This is the first item's accordion body. It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the .accordion-body, though the transition does limit overflow.",
+        "I specialize in creating responsive, user-friendly web interfaces. My core skills include HTML, CSS, JavaScript, and React. Additionally, I'm skilled in frameworks like Bootstrap, Tailwind CSS, and Material UI, with experience using tools such as Git and NPM for efficient project management. I also have experience integrating APIs and implementing Redux for state management.",
     },
     {
       id: 2,
-      question: "- How Much Will It Cost?",
-      answer:
-        "To Get A Better Idea Of The Cost Of What You Want To Build, Give Us A Quick Phone Call. We’ll Ask You A Few Questions About The Nature Of The Site, What Sort Of Interactivity The Site Will Have, Your Graphic Design Needs, Etc. Then We’ll Be Able To Give You A Ballpark Figure. If You’re Still Interested, We’ll Come To Your Place Of Business And Come Up With A Firm Quote.",
+      question:
+        "- What projects have you completed that demonstrate your frontend skills?",
+      answer: `Food Delivery E-commerce Website: This project involved building a shopping cart and integrating features like live chat and restricted ordering hours.
+GitHub Profile Details Fetcher: A React app that retrieves GitHub user profiles and repositories using the GitHub API.
+Zomato Clone: A clone website developed with React and Redux, which integrates user authentication and order management via Appwrite.`,
     },
     {
       id: 3,
-      question: "- How Do I Associate With IT Company?",
+      question: "- What work experience do you have in web development?",
       answer:
-        "The Process Begins When You Contact Us With Your Requirements. We Analyze Your Requirements And Respond To You. On The Basis Of The Further Discussion, You Can Choose An Engagement Model That Suits You The Best. After That, We Begin The Process Of Development.",
+        "I interned as a Web Development Intern with CodSoft, where I developed an eCommerce landing page, a personal portfolio website, and a functional calculator. This experience helped me strengthen my skills in HTML, CSS, JavaScript, and responsive design principles.",
     },
   ];
 

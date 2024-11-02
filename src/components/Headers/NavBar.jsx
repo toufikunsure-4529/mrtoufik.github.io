@@ -40,7 +40,9 @@ function NavBar() {
         <Link to={"/"}>
           <div className="flex text-xl cursor-pointer items-center gap-2">
             <img src="/favicon.png" className="h-8 w-8" alt="LOGO" />
-            <span className="font-bold test">Toufik Portfollio</span>
+            <span className="font-bold test font-overlock ">
+              Toufik Portfollio
+            </span>
           </div>
         </Link>
 
@@ -60,14 +62,14 @@ function NavBar() {
         >
           {Links.map((link) => (
             <li
-              className="font-semibold my-7 md:my-0 md:ml-8 hover:text-red-600 transition-all duration-200 ease-in"
+              className="font-semibold my-7 md:my-0 md:ml-8 hover:text-red-600 transition-all duration-200 ease-in font-overlock "
               key={link.name}
             >
               <Link to={link.link}>{link.name}</Link>
             </li>
           ))}
           <Link
-            className="bg-gradient-to-r from-indigo-500 to-blue-500 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transform transition duration-300 ease-in-out md:ml-8 md:static flex items-center justify-center"
+            className="bg-gradient-to-r font-overlock  from-indigo-500 to-blue-500 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transform transition duration-300 ease-in-out md:ml-8 md:static flex items-center justify-center"
             to="/quickmsg"
             download
           >
