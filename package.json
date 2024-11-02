@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://mrtoufik.github.io",
+"homepage": "https://toufikunsure-4529.github.io/mrtoufik.github.io",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
