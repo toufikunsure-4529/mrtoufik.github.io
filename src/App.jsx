@@ -14,6 +14,7 @@ import AOS from "aos";
 import "aos/dist/aos.css"; // Import AOS styles
 import HomeAbout from "./components/common/HomeAbout";
 import Education from "./components/common/Education";
+import Loading from "./components/common/Loading";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -35,9 +36,7 @@ function App() {
   return (
     <>
       {loading ? (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100">
-          <img src="/loading.svg" alt="Loading..." className="bg-gray-100" />
-        </div>
+        <Loading />
       ) : (
         <div
           style={{
