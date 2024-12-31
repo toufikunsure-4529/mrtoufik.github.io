@@ -15,6 +15,7 @@ import "aos/dist/aos.css"; // Import AOS styles
 import HomeAbout from "./components/common/HomeAbout";
 import Education from "./components/common/Education";
 import Loading from "./components/common/Loading";
+import NewYearCard from "./components/common/NewYearCard";
 
 function App() {
   const [loading, setLoading] = useState(true);
@@ -48,6 +49,7 @@ function App() {
           }}
         >
           <Navbar />
+          <NewYearCard />
           <HeroSection />
           <HomeAbout />
           {/* <Services /> */}

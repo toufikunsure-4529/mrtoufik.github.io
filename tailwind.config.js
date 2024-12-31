@@ -3,9 +3,14 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      fontFamily: { // Update this to fontFamily
+      backdropBlur: {
+        sm: "4px",
+        md: "12px",
+      },
+      fontFamily: {
+        // Update this to fontFamily
         overlock: ["Overlock", "sans-serif"],
-        roboto : ["Roboto Condensed", "sans-serif"],
+        roboto: ["Roboto Condensed", "sans-serif"],
       },
       transform: ["hover"],
       animation: {
