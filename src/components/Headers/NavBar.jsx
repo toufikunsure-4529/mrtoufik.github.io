@@ -69,9 +69,8 @@ function NavBar() {
             </li>
           ))}
           <Link
-            className="bg-gradient-to-r font-overlock  from-indigo-500 to-blue-500 text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transform transition duration-300 ease-in-out md:ml-8 md:static flex items-center justify-center"
-            to="/quickmsg"
-            download
+            className="bg-gradient-to-r font-overlock  bg-gray-900  text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transform transition duration-300 ease-in-out md:ml-8 md:static flex items-center justify-center uppercase"
+            to="#"
           >
             <span className="flex items-center gap-2">
               <svg
@@ -83,7 +82,7 @@ function NavBar() {
                 <path d="M2 2a2 2 0 00-2 2v12a2 2 0 002 2h14a2 2 0 002-2V4a2 2 0 00-2-2H2zm0 2h14v12H2V4zm2 1a1 1 0 100 2h10a1 1 0 100-2H4z" />
                 <path d="M4 9h10v1H4z" />
               </svg>
-              Quick Message
+              Book a Call
             </span>
           </Link>
         </ul>

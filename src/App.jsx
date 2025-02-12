@@ -49,7 +49,8 @@ function App() {
           }}
         >
           <Navbar />
-          <NewYearCard />
+          {/* <Ne
+          wYearCard /> */}
           <HeroSection />
           <HomeAbout />
           {/* <Services /> */}

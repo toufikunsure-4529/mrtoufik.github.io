@@ -2,9 +2,19 @@ import React, { useEffect, useState } from "react";
 import { Outlet } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Headers/NavBar";
+import "aos/dist/aos.css";
+import AOS from "aos";
 
 function Layout() {
   const [showModal, setShowModal] = useState(false);
+
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+      once: false,
+      offset: 100,
+    });
+  }, []);
 
   useEffect(() => {
     const handleContextMenu = (e) => {

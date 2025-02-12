@@ -30,17 +30,22 @@ function HeroSection() {
       <div className="absolute bottom-16 right-16 h-40 w-40 bg-pink-500 rounded-full opacity-20 blur-3xl animate-pulse"></div>
 
       {/* Left Side: Text Content */}
-      <div className="md:w-1/2 flex flex-col items-start text-left z-10">
+      <div
+        className="md:w-1/2 flex flex-col items-start text-left z-10"
+        data-aos="fade-right"
+      >
         <h1 className="text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight ">
           Hi, I'm <span className="text-indigo-600">Toufik Sk</span>
         </h1>
 
+        <div className="max-w-2xl">
         <p
           className="text-lg md:text-2xl text-gray-700 mb-6 font-overlock "
           ref={el}
         >
           {/* Typed.js animation */}
         </p>
+        </div>
 
         <p className="text-md md:text-lg text-gray-600 mb-8 font-overlock ">
           I design and build modern web applications that drive business success
@@ -52,7 +57,7 @@ function HeroSection() {
             className="bg-indigo-600 text-white font-semibold md:py-3 md:px-8 py-1 px-1 rounded-2xl md:rounded-full shadow-lg hover:bg-indigo-700 hover:scale-105 transform transition duration-300 text-sm md:text-md"
             onClick={() => (window.location.href = "#about")}
           >
-            Explore My Work
+            Book a Free Consultation
           </button>
           {/* <button
             className="bg-pink-600 text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:bg-pink-700 hover:scale-105 transform transition duration-300"
@@ -71,7 +76,10 @@ function HeroSection() {
       </div>
 
       {/* Right Side: Image */}
-      <div className="md:w-1/2 mt-10 md:mt-0 relative flex justify-center items-center z-10">
+      <div
+        className="md:w-1/2 mt-10 md:mt-0 relative flex justify-center items-center z-10"
+        data-aos="fade-left"
+      >
         <div className="relative w-full max-w-xs md:max-w-sm lg:max-w-md">
           <img
             src="/profile1.jpeg"
