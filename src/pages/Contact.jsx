@@ -3,7 +3,7 @@ import ContactComponents from "../components/common/ContactComponents";
 
 function Contact() {
   return (
-    <div className=" w-full mt-16">
+    <div className=" w-full">
         <ContactComponents />
     </div>
   );

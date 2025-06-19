@@ -22,7 +22,7 @@ function Layout() {
       setShowModal(true); // Show the modal when right-click is attempted
     };
 
-    document.addEventListener("contextmenu", handleContextMenu);
+    // document.addEventListener("contextmenu", handleContextMenu);
 
     return () => {
       document.removeEventListener("contextmenu", handleContextMenu);

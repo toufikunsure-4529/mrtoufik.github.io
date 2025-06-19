@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Overlock:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap");
 html {
   scroll-behavior: smooth;
 }
@@ -57,10 +57,20 @@ html {
 
 .sticky-nav {
   position: fixed;
-  top: 0;
-  width: 100%;
+  top: 10px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  max-width: 1200px;
   z-index: 1000;
-  animation: slideDown 0.5s ease forwards; /* Add 'forwards' to keep final state */
+
+  background: linear-gradient(90deg, #0d0d1f, #0a0a1a);
+  border: 1px solid #ffff;
+  border-radius: 9999px;
+  box-shadow: 0 0 10px rgba(0, 122, 255, 0.15);
+
+  animation: slideDown 0.5s ease forwards;
+  backdrop-filter: blur(10px); 
 }
 
 @keyframes slideDown {
@@ -79,7 +89,6 @@ html {
   overflow: hidden;
   transition: transform 0.3s, box-shadow 0.3s;
   transform: translateY(-0px);
-  
 }
 
 .card::before,

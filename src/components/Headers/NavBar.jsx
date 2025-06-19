@@ -1,93 +1,126 @@
-import { Bars3BottomRightIcon, XMarkIcon } from "@heroicons/react/24/solid";
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Menu, X, Phone } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function NavBar() {
   const Links = [
-    { name: "Home", link: "/" },
-    { name: "Services", link: "/services" },
-    { name: "About me", link: "/about" },
+    { name: "About", link: "/about" },
+    { name: "Portfolio", link: "/portfolio" },
+    { name: "Blog", link: "/blog" },
+    { name: "Pricing", link: "/pricing" },
     { name: "Contact", link: "/contact" },
+    { name: "Testimonials", link: "/testimonials" },
   ];
 
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
-  const navigate = useNavigate();
 
   useEffect(() => {
-    const handleScrollWindow = () => {
-      if (window.scrollY > 200) {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
         setIsSticky(true);
       } else {
         setIsSticky(false);
       }
     };
 
-    window.addEventListener("scroll", handleScrollWindow);
-    return () => {
-      window.removeEventListener("scroll", handleScrollWindow);
-    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div
-      className={`shadow-md w-full transition-transform duration-700 ease-in-out ${
-        isSticky ? "sticky-nav slide-down" : "absolute top-0 left-0 z-[99]"
+    <nav
+      className={`w-full z-50 ${
+        isSticky ? "sticky-nav " : "absolute top-0 bg-transparent"
       }`}
     >
-      <div className="md:px-10 py-4 px-7 md:flex justify-between items-center bg-white">
-        {/* Logo */}
-        <Link to={"/"}>
-          <div className="flex text-xl cursor-pointer items-center gap-2">
-            <img src="/favicon.png" className="h-8 w-8" alt="LOGO" />
-            <span className="font-bold test font-overlock ">
-              Toufik Portfollio
-            </span>
-          </div>
-        </Link>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between items-center h-16 md:h-20">
+          {/* Logo */}
+          <Link to="/">
+            <div className="flex items-center space-x-3">
+              <img
+                src="/logo.png"
+                alt="Toufik Logo"
+                className="w-12 h-12 object-fit-cover bg-white rounded-full"
+              />
+              <span className="text-white font-bold text-lg md:text-xl font-sans">
+                Toufik Portfolio
+              </span>
+            </div>
+          </Link>
 
-        {/* Menu Icon */}
-        <div
-          onClick={() => setIsNavOpen(!isNavOpen)}
-          className="w-7 h-7 absolute right-8 top-6 cursor-pointer md:hidden"
-        >
-          {isNavOpen ? <XMarkIcon /> : <Bars3BottomRightIcon />}
+          {/* Desktop Navigation */}
+          <div className="hidden md:flex items-center space-x-8">
+            {Links.map((link) => (
+              <a
+                key={link.name}
+                href={link.link}
+                className="text-gray-300 hover:text-white transition-colors duration-200 font-medium relative group"
+              >
+                {link.name}
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-500 transition-all duration-300 group-hover:w-full"></span>
+              </a>
+            ))}
+          </div>
+
+          {/* Book a Call Button */}
+          <div className="hidden md:block">
+            <a
+              href="#contact"
+              className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold py-2.5 px-6 rounded-full transition-all duration-300 transform hover:scale-105 flex items-center space-x-2 shadow-lg"
+            >
+              <Phone className="w-4 h-4" />
+              <span>Book a Call</span>
+            </a>
+          </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={() => setIsNavOpen(!isNavOpen)}
+              className="text-white hover:text-gray-300 transition-colors duration-200"
+            >
+              {isNavOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
         </div>
 
-        {/* Navigation Menu */}
-        <ul
-          className={`md:flex md:items-center md:pb-0 pb-12 absolute md:static md:z-auto z-[-1] left-0 w-full md:w-auto pl-9 md:pl-0 transition-all duration-500 ease-in ${
-            isNavOpen ? "top-12 bg-white" : "top-[-490px]"
+        {/* Mobile Navigation */}
+        <div
+          className={`md:hidden transition-all duration-300 ease-in-out ${
+            isNavOpen
+              ? "max-h-96 opacity-100"
+              : "max-h-0 opacity-0 overflow-hidden"
           }`}
         >
-          {Links.map((link) => (
-            <li
-              className="font-semibold my-7 md:my-0 md:ml-8 hover:text-red-600 transition-all duration-200 ease-in font-overlock "
-              key={link.name}
-            >
-              <Link to={link.link}>{link.name}</Link>
-            </li>
-          ))}
-          <Link
-            className="bg-gradient-to-r font-overlock  bg-gray-900  text-white font-semibold py-2 px-4 rounded-full shadow-lg hover:shadow-xl transform transition duration-300 ease-in-out md:ml-8 md:static flex items-center justify-center uppercase"
-            to="#"
-          >
-            <span className="flex items-center gap-2">
-              <svg
-                className="h-5 w-5"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-                fill="currentColor"
+          <div className="py-4 space-y-4 bg-gray-900/95 backdrop-blur-md rounded-lg mt-2 px-4">
+            {Links.map((link) => (
+              <a
+                key={link.name}
+                href={link.link}
+                className="block text-gray-300 hover:text-white transition-colors duration-200 font-medium py-2"
+                onClick={() => setIsNavOpen(false)}
               >
-                <path d="M2 2a2 2 0 00-2 2v12a2 2 0 002 2h14a2 2 0 002-2V4a2 2 0 00-2-2H2zm0 2h14v12H2V4zm2 1a1 1 0 100 2h10a1 1 0 100-2H4z" />
-                <path d="M4 9h10v1H4z" />
-              </svg>
+                {link.name}
+              </a>
+            ))}
+            <a
+              href="#contact"
+              className="block bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold py-3 px-6 rounded-full text-center transition-all duration-300 mt-4"
+              onClick={() => setIsNavOpen(false)}
+            >
+              <Phone className="w-4 h-4 inline mr-2" />
               Book a Call
-            </span>
-          </Link>
-        </ul>
+            </a>
+          </div>
+        </div>
       </div>
-    </div>
+    </nav>
   );
 }
 

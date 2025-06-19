@@ -19,6 +19,7 @@
     "appwrite": "^14.0.1",
     "framer-motion": "^11.11.8",
     "localforage": "^1.10.0",
+    "lucide-react": "^0.518.0",
     "match-sorter": "^6.3.4",
     "react": "^18.2.0",
     "react-countup": "^6.5.3",
